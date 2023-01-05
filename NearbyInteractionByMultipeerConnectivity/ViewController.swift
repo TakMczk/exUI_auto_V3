@@ -277,19 +277,13 @@ extension ViewController: NISessionDelegate {
             
             if vertical_r < 0.5 {
                 self.addSubview(imageView2)
-                Old_LvFlag = LvFlag
             }else{
-                if LvFlag <= 0 && Old_LvFlag != LvFlag {
+                if LvFlag <= 0  {
                     self.addSubview(imageView)
-                    Old_LvFlag = LvFlag
-                }else if  r_for_ui == 1 && Old_LvFlag != LvFlag {
+                }else if  r_for_ui == 1 {
                     self.addSubview(imageView3)
-                    Old_LvFlag = LvFlag
-                }else if r_for_ui > 2 && Old_LvFlag < 2 {
+                }else if r_for_ui > 2 {
                     self.addSubview(imageView4)
-                    Old_LvFlag = LvFlag
-                }else{
-                    Old_LvFlag = LvFlag
                 }
             }
         }
